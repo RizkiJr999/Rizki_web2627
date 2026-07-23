@@ -1,0 +1,108 @@
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 30px;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+
+        .header-container {
+            display: flex;
+            align-items: center;
+            border: 1px solid #777;
+            padding: 5px 30px;
+            width: 700px;
+            box-sizing: border-box;
+            background-color: #fff;
+        }
+
+        .header-logo {
+            width: 150px;
+            height: auto;
+            margin-right: 25px;
+        }
+
+        .header-text {
+            flex-grow: 1;
+            text-align: center;
+        }
+
+        .header-text h2 {
+            margin: 0;
+            font-size: 22px;
+            font-weight: bold;
+        }
+
+        .header-text h3 {
+            margin: 10px 0 5px 0;
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        .header-text h4 {
+            margin: 0;
+            font-size: 15px;
+            font-weight: bold;
+        }
+
+        .table-title {
+            text-align: center;
+            font-weight: bold;
+            margin-top: 30px;
+            margin-bottom: 10px;
+            font-size: 16px;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 700px;
+            background-color: #fff;
+        }
+
+        th, td {
+            border: 1px solid #555;
+            padding: 8px 12px;
+            text-align: center;
+            font-size: 14px;
+        }
+
+        .text-left {
+            text-align: left;
+        }
+
+        .identity-title {
+            text-align: center;
+            font-weight: bold;
+            margin-top: 30px;
+            margin-bottom: 10px;
+            font-size: 16px;
+        }
+
+        .identity-box {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border: 1px solid #555;
+            padding: 10px 20px;
+            width: 320px;
+            background-color: #fff;
+        }
+
+        .logo {
+            width: 45px;
+            height: auto;
+        }
+
+        .identity-details {
+            font-size: 14px;
+            font-weight: bold;
+            line-height: 1.6;
+        }
+
+        .identity-details td {
+            border: none;
+            padding: 2px 5px;
+            text-align: left;
+        }
