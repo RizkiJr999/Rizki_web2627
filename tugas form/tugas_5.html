@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tugas 5</title>
+</head>
+<body>
+    <style>
+    @page {
+        size: A4;
+        margin: 0;
+    }
+
+    * {
+        box-sizing: border-box;
+    }
+
+    body {
+        margin: 0;
+        padding: 0;
+        background: white;
+        font-family: "Times New Roman", Times, serif;
+        color: #111;
+    }
+
+    .page {
+        width: 210mm;
+        height: 297mm;
+        padding: 9mm 35mm 8mm 35mm;
+        position: relative;
+        background: #fff;
+    }
+
+    .header {
+        height: 31mm;
+        border-bottom: 2px solid #111cff;
+        position: relative;
+        text-align: center;
+    }
+
+    .heart {
+        position: absolute;
+        left: 2mm;
+        top: 0mm;
+        width: 27mm;
+        height: 24mm;
+    }
+
+    .heart:before,
+    .heart:after {
+        content: "";
+        position: absolute;
+        width: 13mm;
+        height: 20mm;
+        border: 1px solid #999;
+        border-radius: 50% 50% 0 0;
+        top: 1mm;
+    }
+
+    .heart:before {
+        left: 7mm;
+        transform: rotate(45deg);
+        transform-origin: 0 100%;
+    }
+
+    .heart:after {
+        left: -1mm;
+        transform: rotate(-45deg);
+        transform-origin: 100% 100%;
+    }
+
+    .title {
+        color: #061c9c;
+        font-family: Arial, sans-serif;
+        font-weight: bold;
+        font-size: 12px;
+        letter-spacing: .2px;
+        margin-top: 0;
+    }
+
+    .subtitle {
+        color: #061c9c;
+        font-family: Arial, sans-serif;
+        font-weight: bold;
+        font-size: 10px;
+        margin-top: 2px;
+    }
+
+    .school {
+        color: #061c9c;
+        font-family: Arial, sans-serif;
+        font-weight: bold;
+        font-size: 8px;
+        margin-top: 2px;
+    }
+
+    .contact {
+        font-size: 6.5px;
+        line-height: 1.25;
+        margin-top: 3px;
+    }
+
+    .contact b {
+        font-weight: normal;
+    }
+
+    .reg-box {
+        position: absolute;
+        right: 0;
+        top: 18mm;
+        width: 17mm;
+        height: 21mm;
+        border: 1px solid #777;
+        font-size: 6px;
+        text-align: center;
+        padding-top: 2px;
+    }
+
+    .photo {
+        height: 15mm;
+        border-top: 1px solid #777;
+        margin-top: 2px;
+    }
+
+    .section {
+        margin-top: 3mm;
+        font-size: 7px;
+    }
+
+    .section-title {
+        font-weight: bold;
+        text-decoration: underline;
+        font-size: 7px;
+        margin-bottom: 1px;
+    }
+
+    .row {
+        display: flex;
+        height: 4.1mm;
+        align-items: center;
+    }
+
+    .num {
+        width: 6mm;
+        text-align: right;
+        padding-right: 1.5mm;
+    }
+
+    .label {
+        width: 30mm;
+    }
+
+    .colon {
+        width: 3mm;
+        text-align: center;
+    }
+
+    .line {
+        flex: 1;
+        border-bottom: 1px dotted #555;
+        height: 3.1mm;
+    }
+
+    .line-text {
+        flex: 1;
+        border-bottom: 1px dotted #555;
+        height: 3.1mm;
+        font-size: 6.5px;
+    }
+
+    .small-section {
+        margin-top: 2mm;
+    }
+
+    .school-section {
+        margin-top: 3mm;
+    }
+
+    .footer {
+        position: absolute;
+        left: 35mm;
+        right: 35mm;
+        bottom: 14mm;
+        font-size: 6px;
+    }
+
+    .footer-top {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 14mm;
+    }
+
+    .approval {
+        width: 48%;
+        text-align: left;
+    }
+
+    .candidate {
+        width: 48%;
+        text-align: center;
+    }
+
+    .sign-space {
+        height: 12mm;
+    }
+
+    .sign-line {
+        display: inline-block;
+        width: 42mm;
+        border-bottom: 1px dotted #555;
+    }
+
+    .parent-sign {
+        text-align: left;
+        margin-top: 4mm;
+    }
+
+    .catatan {
+        position: absolute;
+        bottom: 3mm;
+        left: 0;
+        font-size: 5.5px;
+        line-height: 1.35;
+    }
+
+    .catatan b {
+        font-weight: bold;
+    }
+
+    .date-line {
+        position: absolute;
+        right: 0;
+        top: -5mm;
+        font-size: 6px;
+    }
+</style>
+</head>
+
+<body>
+
+<div class="page">
+
+    <div class="header">
+
+        <div class="heart"></div>
+
+        <div class="title">FORMULIR PENDAFTARAN</div>
+        <div class="subtitle">CALON SISWA/SISWI MTs.</div>
+        <div class="subtitle">TAHUN PELAJARAN 2016/2017</div>
+
+        <div class="school">
+            Sekretariat : Jl. .............................................................. Kode Pos : .......
+        </div>
+        <div class="contact">
+            Email : <b>...........................................</b><br>
+            Website : <b>http://....................................</b>
+        </div>
+
+        <div class="reg-box">
+            No.<br>Pendaftar
+            <div class="photo"></div>
+        </div>
+    </div>
+
+
+    <div class="section">
+        <div class="section-title">A. DATA PRIBADI CALON SISWA*)</div>
+
+        <div class="row">
+            <div class="num">1.</div>
+            <div class="label">Nama Lengkap</div>
+            <div class="colon">:</div>
+            <div class="line"></div>
+        </div>
+
+        <div class="row">
+            <div class="num">2.</div>
+            <div class="label">Jenis Kelamin</div>
+            <div class="colon">:</div>
+            <div class="line"></div>
+        </div>
+
+        <div class="row">
+            <div class="num">3.</div>
+            <div class="label">Tempat/Tgl. Lahir</div>
+            <div class="colon">:</div>
+            <div class="line"></div>
+        </div>
+
+        <div class="row">
+            <div class="num">4.</div>
+            <div class="label">Alamat</div>
+            <div class="colon">:</div>
+            <div class="line-text">............................................................</div>
+        </div>
+
+        <div class="row">
+            <div class="num">5.</div>
+            <div class="label">Anak ke</div>
+            <div class="colon">:</div>
+            <div class="line-text">............... dari ............... bersaudara</div>
+        </div>
+    </div>
+
+
+    <div class="section">
+        <div class="section-title">B. DATA ORANG TUA/WALI CALON SISWA*)</div>
+
+        <div class="row">
+            <div class="num">1.</div>
+            <div class="label">Nama Ayah</div>
+            <div class="colon">:</div>
+            <div class="line"></div>
+        </div>
+
+        <div class="row">
+            <div class="num">2.</div>
+            <div class="label">Nama Ibu</div>
+            <div class="colon">:</div>
+            <div class="line"></div>
+        </div>
+
+        <div class="row">
+            <div class="num">3.</div>
+            <div class="label">Pekerjaan Ayah</div>
+            <div class="colon">:</div>
+            <div class="line"></div>
+        </div>
+
+        <div class="row">
+            <div class="num">4.</div>
+            <div class="label">Pekerjaan Ibu</div>
+            <div class="colon">:</div>
+            <div class="line"></div>
+        </div>
+
+        <div class="row">
+            <div class="num">5.</div>
+            <div class="label">Alamat</div>
+            <div class="colon">:</div>
+            <div class="line"></div>
+        </div>
+
+        <div class="row">
+            <div class="num">6.</div>
+            <div class="label">No. Telp/HP</div>
+            <div class="colon">:</div>
+            <div class="line"></div>
+        </div>
+
+        <div class="row">
+            <div class="num">7.</div>
+            <div class="label">Nama Wali</div>
+            <div class="colon">:</div>
+            <div class="line"></div>
+        </div>
+
+        <div class="row">
+            <div class="num">8.</div>
+            <div class="label">Pekerjaan Wali</div>
+            <div class="colon">:</div>
+            <div class="line"></div>
+        </div>
+
+        <div class="row">
+            <div class="num">9.</div>
+            <div class="label">Alamat Wali</div>
+            <div class="colon">:</div>
+            <div class="line"></div>
+        </div>
+    </div>
+
+
+    <div class="section school-section">
+        <div class="section-title">C. ASAL SEKOLAH</div>
+
+        <div class="row">
+            <div class="num">1.</div>
+            <div class="label">Nama Sekolah</div>
+            <div class="colon">:</div>
+            <div class="line"></div>
+        </div>
+
+        <div class="row">
+            <div class="num">2.</div>
+            <div class="label">Nama Sekolah</div>
+            <div class="colon">:</div>
+            <div class="line"></div>
+        </div>
+
+        <div class="row">
+            <div class="num">3.</div>
+            <div class="label">Alamat Sekolah</div>
+            <div class="colon">:</div>
+            <div class="line"></div>
+        </div>
+
+        <div class="row">
+            <div class="num">4.</div>
+            <div class="label">NISN</div>
+            <div class="colon">:</div>
+            <div class="line"></div>
+        </div>
+
+        <div class="row">
+            <div class="num">5.</div>
+            <div class="label">Nomor Peserta US/M</div>
+            <div class="colon">:</div>
+            <div class="line"></div>
+        </div>
+    </div>
+
+
+    <div class="section school-section">
+        <div class="section-title">D. DATA NILAI UJIAN</div>
+
+        <div class="row">
+            <div class="num">1.</div>
+            <div class="label">Nomor SKHUN</div>
+            <div class="colon">:</div>
+            <div class="line"></div>
+        </div>
+
+        <div class="row">
+            <div class="num">2.</div>
+            <div class="label">Jumlah Nilai UN</div>
+            <div class="colon">:</div>
+            <div class="line"></div>
+        </div>
+
+        <div class="row">
+            <div class="num">3.</div>
+            <div class="label">Nilai Rata-rata UN</div>
+            <div class="colon">:</div>
+            <div class="line"></div>
+        </div>
+    </div>
+
+
+    <div class="footer">
+
+        <div class="date-line">
+            ........................................ 2016
+        </div>
+
+        <div class="footer-top">
+
+            <div class="approval">
+                Mengetahui/Menyetujui :<br>
+                Orangtua/Wali Calon Siswa
+
+                <div class="sign-space"></div>
+
+                (<span class="sign-line"></span>)
+            </div>
+
+            <div class="candidate">
+                Calon Siswa
+
+                <div class="sign-space"></div>
+
+                (<span class="sign-line"></span>)
+            </div>
+
+        </div>
+
+        <div class="parent-sign">
+            <b>Petugas</b>
+
+            <div class="sign-space"></div>
+
+            (<span class="sign-line"></span>)
+        </div>
+
+        <div class="catatan">
+            <b>Catatan :</b><br>
+            *) Beri tanda dengan (√) pada kolom yang sesuai<br>
+            **) Diisi jika calon siswa berasal dari luar sekolah
+        </div>
+
+    </div>
+
+</div>
+
+
+</body>
+</html>
