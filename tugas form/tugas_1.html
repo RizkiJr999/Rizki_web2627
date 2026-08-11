@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tugas 1</title>
+</head>
+<body>
+    <h2>Formulir Pendaftaran Siswa</h2>
+    <form action="/action_page.php">
+    <table border="1" cellpadding="5">
+        <tr>
+            <td>Nama Calon Siswa</td>
+            <td>:</td>
+            <td><input type="text" id="nama" name="nama"></td>
+        </tr>
+        <tr>
+            <td>Tempat/Tanggal lahir</td>
+            <td>:</td>
+            <td><input type="text" id="nama" name="nama">
+                <label for="birthday"></label>
+        <input type="date" id="birthday" name="birthday"></td>
+        </tr>
+        <tr>
+            <td>Agama</td>
+            <td>:</td>
+            <td> <label for="Agama"></label>
+        <select id="cars" name="Agama">
+            <option value="Islam">Islam</option>
+            <option value="Kristen">Kristen</option>
+            <option value="Hindu">Hindu</option>
+            <option value="Buddha">Buddha</option>
+            <option value="Sikhisme">Sikhisme</option>
+            <option value="yudaisme">yudaisme</option>
+            <option value="Shinto">Shinto</option>
+            <option value="Taoisme">Taoisme</option>
+            <option value="Konfusianisme">Konfusianisme</option>
+            <option value="Bahá'í">Bahá'í</option>
+        </select></td>
+        </tr>
+        <tr>
+            <td>Alamat</td>
+            <td>:</td>
+            <td><textarea name="pesan" rows="5" cols="40">
+        </textarea></td>
+        </tr>
+        <tr>
+            <td>Jenis Kelamin</td>
+            <td>:</td>
+            <td><input type="radio" id="html" name="fav_language" value="Perempuan">
+            <label for="html">Perempuan</label>  <input type="radio" id="html" name="fav_language" value="laki-laki">
+            <label for="html">laki-laki</label></td>
+        </tr>
+        <tr>
+                    <td>Hobi</td>
+                    <td>:</td>
+                    <td>
+                        <input type="checkbox" id="membaca" name="hobi[]" value="Membaca">
+                        <label for="membaca">Membaca</label>
+                        <input type="checkbox" id="menulis" name="hobi[]" value="Menulis">
+                        <label for="menulis">Menulis</label>
+                        <input type="checkbox" id="olahraga" name="hobi[]" value="Olahraga">
+                        <label for="olahraga">Olahraga</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Pas Foto</td>
+                    <td>:</td>
+                    <td><input type="file" name="pas_foto"></td>
+                </tr>
+                <tr>
+                    <td>Username</td>
+                    <td>:</td>
+                    <td><input type="text" name="username"></td>
+                </tr>
+                <tr>
+                    <td>Password</td>
+                    <td>:</td>
+                    <td><input type="password" name="password"></td>
+                </tr>
+                <tr>
+                    <td colspan="3" align="right">
+                        <input type="reset" value="RESET">
+                        <input type="submit" value="SUBMIT">
+                    </td>
+                </tr>
+    </table>
+    </form>
+</body>
+</html>
